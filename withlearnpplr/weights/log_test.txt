@@ -1,0 +1,12 @@
+==========
+Args:Namespace(batch_size=64, data_dir='C:\\Users\\admin\\Desktop\\PPLR-main\\examples\\data', dataset='market1501', height=384, part=3, rerank=False, resume='C:\\Users\\admin\\Desktop\\PPLR-main\\weights\\market_resnet50.pth', seed=1, width=128, workers=4)
+==========
+=> Market1501 loaded
+Dataset statistics:
+  ----------------------------------------
+  subset   | # ids | # images | # cameras
+  ----------------------------------------
+  train    |   751 |    12936 |         6
+  query    |   750 |     3368 |         6
+  gallery  |   751 |    15913 |         6
+  ----------------------------------------
