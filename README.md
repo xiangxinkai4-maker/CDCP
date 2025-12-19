@@ -12,8 +12,8 @@ Our CDCP learns discriminative representations with rich local contexts. Also, i
 ## Getting Started
 ### Installation
 ```shell
-git clone https://github.com/yoonkicho/PPLR
-cd PPLR
+git clone https://github.com/xiangxinkai4-maker/CDCP
+cd CDCP
 python setup.py develop
 ```
 ### Preparing Datasets
