@@ -1,18 +1,8 @@
-# CDCP
-# Part-based Pseudo Label Refinement (PPLR)
-Official PyTorch implementation of [Part-based Pseudo Label Refinement for Unsupervised Person Re-identification](https://arxiv.org/abs/2203.14675) (CVPR 2022).
-
-## Updates
-- [07/2022] Pretrained weights are released.
-- [06/2022] Code is released.
+# CDCP# Part-based Pseudo Label Refinement (PPLR)
 
 ## Overview
-![overview](figs/overview.jpg)
->We propose a Part-based Pseudo Label Refinement (PPLR) framework that reduces the label noise by employing the complementary relationship between global and part features.
-Specifically, we design a cross agreement score as the similarity of k-nearest neighbors between feature spaces to exploit the reliable complementary relationship. 
-Based on the cross agreement, we refine pseudo-labels of global features by ensembling the predictions of part features, which collectively alleviate the noise in global feature clustering. 
-We further refine pseudo-labels of part features by applying label smoothing according to the suitability of given labels for each part.
-Our PPLR learns discriminative representations with rich local contexts. Also, it operates in a self-ensemble manner without auxiliary teacher networks, which is computationally efficient.
+>In this work, we propose CDCP, a unified framework integrating a camera-aware Jaccard distance metric with a dynamic clustering adjustment strategy. Our approach reduces label noise through part-based pseudo-label refinement and improves cross-camera similarity estimation. Extensive experiments on Market-1501, DukeMTMC-reID, MSMT17, and VeRi-776 demonstrate that CDCP consistently outperforms baseline methods, achieving significant gains in mAP and Rank-1 accuracy.
+Our CDCP learns discriminative representations with rich local contexts. Also, it operates in a self-ensemble manner without auxiliary teacher networks, which is computationally efficient.
 
 ## Getting Started
 ### Installation
@@ -34,7 +24,7 @@ PPLR/examples/data
 └── VeRi
 ```
 ## Training
-We utilize 4 TITAN RTX GPUs for training.
+We utilize 3 TITAN XP GPUs for training.
 We use 384x128 sized images for Market-1501 and MSMT17 and 256x256 sized images for VeRi-776.
 
 ### Training without camera labels
@@ -100,19 +90,8 @@ CUDA_VISIBLE_DEVICES=0\
 python examples/test.py \
 -d veri --height 256 --width 256 --resume $PATH_FOR_MODEL
 ```
+> **This is the official implementation of the manuscript:**  
+> **"Enhancing Unsupervised Person Re-Identification via Camera-Aware Jaccard Distance and Adaptive Dynamic Clustering"**  
+> *Submitted to The Visual Computer.*  
+> **If you find this code useful in your research, please consider citing our paper.**
 
-## Acknowledgement
-Some parts of the code is borrowed from [SpCL](https://github.com/yxgeee/SpCL).
-
-## Citation
-If you find this code useful for your research, please consider citing our paper:
-
-````BibTex
-@inproceedings{cho2022part,
-  title={Part-based Pseudo Label Refinement for Unsupervised Person Re-identification},
-  author={Cho, Yoonki and Kim, Woo Jae and Hong, Seunghoon and Yoon, Sung-Eui},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={7308--7318},
-  year={2022}
-}
-````
