@@ -1,8 +1,13 @@
-# CDCP# Part-based Pseudo Label Refinement (PPLR)
+# CDCP# 
 
 ## Overview
 >In this work, we propose CDCP, a unified framework integrating a camera-aware Jaccard distance metric with a dynamic clustering adjustment strategy. Our approach reduces label noise through part-based pseudo-label refinement and improves cross-camera similarity estimation. Extensive experiments on Market-1501, DukeMTMC-reID, MSMT17, and VeRi-776 demonstrate that CDCP consistently outperforms baseline methods, achieving significant gains in mAP and Rank-1 accuracy.
 Our CDCP learns discriminative representations with rich local contexts. Also, it operates in a self-ensemble manner without auxiliary teacher networks, which is computationally efficient.
+>**This is the official implementation of the manuscript:**  
+**"Enhancing Unsupervised Person Re-Identification via Camera-Aware Jaccard Distance and Adaptive Dynamic Clustering"**  
+*Submitted to The Visual Computer.*  
+**If you find this code useful in your research, please consider citing our paper.**
+
 
 ## Getting Started
 ### Installation
@@ -90,8 +95,5 @@ CUDA_VISIBLE_DEVICES=0\
 python examples/test.py \
 -d veri --height 256 --width 256 --resume $PATH_FOR_MODEL
 ```
-> **This is the official implementation of the manuscript:**  
-> **"Enhancing Unsupervised Person Re-Identification via Camera-Aware Jaccard Distance and Adaptive Dynamic Clustering"**  
-> *Submitted to The Visual Computer.*  
-> **If you find this code useful in your research, please consider citing our paper.**
+
 
